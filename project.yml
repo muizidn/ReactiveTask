@@ -1,0 +1,19 @@
+name: ReactiveTask
+schemes:
+  ReactiveTask:
+    build:
+      targets:
+        ReactiveTask: build
+targets:
+  ReactiveTask:
+    type: framework
+    platform: macOS
+    settings:
+      INFOPLIST_FILE: Sources/Info.plist
+      MACOSX_DEPLOYMENT_TARGET: 10.9
+    sources:
+      - path: Sources
+        includes:
+          - "*.{h,swift,plist}"
+    dependencies:
+      - carthage: ReactiveSwift
